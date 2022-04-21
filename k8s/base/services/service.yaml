@@ -15,12 +15,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: cicd-sample
+  name: nginx
 spec:
   ports:
   - name: http
-    port: 8080
-    targetPort: 8080
+    port: 80
+    targetPort: 80
     protocol: TCP
   selector:
-    app: cicd-sample
+    app: nginx

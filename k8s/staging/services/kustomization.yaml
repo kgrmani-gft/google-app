@@ -12,26 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-kind: Deployment
-apiVersion: apps/v1
-metadata:
-  name: nginx
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: nginx
-      env: base
-  template:
-    metadata:
-      name: nginx
-      labels:
-        app: nginx
-        env: base
-    spec:
-      containers:
-      - name: nginx
-        image: cicd-sample
-        ports:
-        - containerPort: 80
-   
+resources:
+- service.yaml
