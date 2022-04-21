@@ -1,0 +1,46 @@
+Anthos Multi-Cloud implementation
+Build Repo & pipeline
+
+-Initial pipeline (Cloud Build)
+
+-Pipeline
+---*Private pool
+
+-ASM-Anthos Service Mesh
+---*Anthos installation
+---*ASM installation
+
+-GKE
+---*Private Cluster
+---*Workload Identities
+
+-Anthos on AWS
+---**Standard AWS VPC/NACL/Security Groups (Terraform via Cloud Build?)
+
+-GAR Repo - Google Artifact Registry
+---*GKE deployment repo
+---**EKS deployment repo (Challenge: How to allow EKS service account to pull image from GAR repo)
+
+-ACM - Anthos configuration management 
+---*Configuration management
+---**multi cluster configurations sync
+---*Policy Controller (Opa Gatekeeper)
+
+-Cloud Build work on GitOps
+---*Github actions/Github cloud build app
+---*Terraform Deploy
+
+What we would like to archieve
+
+DevOps
+Fully GitOps
+Auto mTLS certs renew
+
+Security
+binary authorization - Binary Authorization is a deploy-time security control that ensures only trusted container images are deployed on Google Kubernetes Engine (GKE) or Cloud Run.
+security context - A security context defines privilege and access control settings for a Pod or Container. Security context settings- https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+policy ccontroller template
+
+Ref
+(*) first stage
+(**) 2nd stage
